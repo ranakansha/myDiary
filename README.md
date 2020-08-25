@@ -57,23 +57,22 @@ Here is a sneak peek of what i did.
 
 1.login page for blog
 
-![Screenshot (243)](https://user-images.githubusercontent.com/51478832/91122469-0c1fc100-e6b8-11ea-98a5-aff072a2aacd.png)
+![Screenshot (245)](https://user-images.githubusercontent.com/51478832/91122518-278acc00-e6b8-11ea-8c90-3d07e675467c.png)
+
 
 2. signup page for blog
 
-![Screenshot (244)](https://user-images.githubusercontent.com/51478832/91122505-2194eb00-e6b8-11ea-992b-87ec1eba4742.png)
-
-3.home page of my blog
-
-![Screenshot (245)](https://user-images.githubusercontent.com/51478832/91122518-278acc00-e6b8-11ea-8c90-3d07e675467c.png)
-
-4.post homepage for my blog
 ![Screenshot (246)](https://user-images.githubusercontent.com/51478832/91122536-33768e00-e6b8-11ea-97e4-ce62d3919ba9.png)
 
-5.edit post page.
+3.home page of my blog
 ![Screenshot (247)](https://user-images.githubusercontent.com/51478832/91122545-38d3d880-e6b8-11ea-8c3e-b7e01dba9af9.png)
 
+4.post homepage for my blog
+
 ![Screenshot (248)](https://user-images.githubusercontent.com/51478832/91122554-3d988c80-e6b8-11ea-853f-45139dc069ca.png)
+
+5.edit post page.
+
 ![Screenshot (249)](https://user-images.githubusercontent.com/51478832/91122556-3f625000-e6b8-11ea-9470-7389430c0439.png)
 ![Screenshot (250)](https://user-images.githubusercontent.com/51478832/91122568-44bf9a80-e6b8-11ea-85fa-aa217dd9671f.png)
 ![Screenshot (251)](https://user-images.githubusercontent.com/51478832/91122572-4721f480-e6b8-11ea-9389-395e5c331840.png)
