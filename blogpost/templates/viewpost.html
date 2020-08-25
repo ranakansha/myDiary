@@ -1,0 +1,114 @@
+{% extends 'postbase.html' %}
+{% load static %}
+{% block title %}
+myDiary: viewposts
+{% endblock title %}
+{% block content %}
+<style>
+.blocktitle{
+    background-color:#F5F5F5;
+    height:30%;
+}
+.textcenter{
+    padding-top:3%;
+    padding-left:10%;
+}
+.datetime{
+    padding-left:12%;
+    padding-top:1%;
+}
+.author{
+    padding-left:80%;
+    padding-bottom:2%;
+}
+#toprow{
+    margin-top:1%;
+    margin-left:2%;
+    margin-right:3%;
+
+}
+.img-fluid{
+    height:400px;
+    width:1000px;
+    margin-bottom:3%;
+}
+.postsidebar{
+    margin-left:2%;
+}
+.popular{
+    margin-left:2%;
+}
+.icon-button{
+    margin-left:10%;
+}
+.Shear{
+    margin-left:3%;
+    margin-top:8%;
+    margin-bottom:8%;
+}
+.commentbox{
+    margin-left:8%;
+    margin-right:50%;
+}
+.do{
+    margin-left:3%;
+    margin-bottom:3%;
+    margin-top:2%;
+}
+.totalcomment{
+    margin-left:3%;
+}
+</style>
+{% for view in filterpost %}
+<div class="container-fluid">
+<div class="blocktitle">
+<h4 class="textcenter">{{view.post_title}}</h4>
+<p class="datetime"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;{{view.timestamp}}</p>
+<p class="author"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;{{view.post_author}}</p>
+</div>
+<div class="row" id="toprow">
+<div class="col-9">
+<img src="{% static 'image/domo.jpg'%}" class="img-fluid" alt="Responsive image" >
+<div content>
+<p>{{view.post_desc}}</p>
+</div>
+</div>
+<div class="col-3">
+<h5 class="popular">POPULAR</h5>
+<p class="postsidebar">
+<div class="card" style="width: 15rem;">
+  <img class="card-img-top" src="{% static 'image/background.jpg'%}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+</p>
+</div>
+</div>
+<hr/>
+<h4 class="Shear">Shear This:
+<a href="#" class="icon-button twitter"><i class="fa fa-twitter"></i><span></span></a>
+<a href="#" class="icon-button facebook"><i class="fa fa-facebook"></i><span></span></a>
+<a href="#" class="icon-button google-plus"><i class="fa fa-google-plus"></i><span></span></a>
+<a href="#" class="icon-button youtube"><i class="fa fa-youtube"></i><span></span></a>
+<a href="#" class="icon-button pinterest"><i class="fa fa-pinterest"></i><span></span></a>
+</h4>
+<hr/>
+<h4 class="do">Do COMMENTS:</h4>
+<p class="totalcomment">Total Comment:<code>24</code></p>
+<div class="commentbox">
+<form method="Post" >
+<div class="form-group">
+    <div class="form-group">
+    <input type="hidden" class="form-control" name="postsno" value="postsno"><br/>
+    <label for="exampleFormControlTextarea1">Comment:</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Enter your comment</textarea>
+  </div>
+  {% csrf_token %}
+  <button type="submit" class="btn btn-primary">Submit comment</button>
+</form>
+</div>
+</div>
+{% endfor %}
+{% endblock content %}

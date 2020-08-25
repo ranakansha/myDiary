@@ -1,0 +1,88 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>{% block title %}
+    {% endblock title %}</title>
+    <style>
+   
+    .navbar-brand{
+        margin-left:60px;
+    }
+    .form-inline{
+        margin-left:300px;
+    }
+    .nav-item{
+        margin-right:50px;
+    }
+    .nav-item i{
+        font-size: 1.2em;
+    }
+    #navbarDropdown{
+         font-size: 1.2em;
+    }
+        </style>
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-light ">
+  
+  <a class="navbar-brand" href="/bloghome/myDiary">
+  <img src="{% static 'image/logo.png' %}" alt="logo" height="60" width="50"/>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <form class="form-inline my-2 my-lg-0" action="/bloghome/search" method="GET">
+      <input class="form-control mr-sm-2" type="search" name="query" id="query" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/blogpost/post">
+        <i class="fa fa-plus" aria-hidden="true">&nbsp;&nbsp;&nbsp;New Blog</i>
+         </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">
+        <i class="fa fa-bell" aria-hidden="true">&nbsp;&nbsp;&nbsp;Notification</i>
+        </a>
+      </li>
+     {% if user.is_authenticated %}
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle fa fa-user-circle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        &nbsp;&nbsp;&nbsp; {{request.user}}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a  class="dropdown-item">{{request.user.email}}</a>
+          <a class="dropdown-item" href="#">Profile</a>
+          <a class="dropdown-item" href="/logout">Logout</a>
+          
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">About Us</a>
+          <a class="dropdown-item" href="/bloghome/contact">Contact</a>
+          <a class="dropdown-item" href="#">Help</a>
+          <a class="dropdown-item" href="#">Setting</a>
+        </div>
+      </li>
+      {% endif %}
+    </ul>
+    
+  </div>
+</nav>
+{% block content %}
+{% endblock content %}
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

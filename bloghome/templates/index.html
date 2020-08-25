@@ -1,0 +1,151 @@
+{% extends 'homebase.html' %}
+{% load static %}
+{% block title %}myDiary{% endblock title %}
+{% block content %}
+
+    <style>
+    
+    #body{
+        margin-top:30px;
+        margin-bottom:50px;
+    }
+    .videocontent{
+        margin-left:150px;
+        margin-top:100px;
+    } 
+    .videocontentp{
+        margin-left:150px;
+    }
+    body {
+  padding: 2rem 0rem;
+}
+
+.card-img {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.card-title {
+  margin-bottom: 0.3rem;
+}
+
+.cat {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.card-footer {
+  font-size: 0.8rem;
+}
+.container{
+    margin-top:40px;
+}
+.headingtitle{
+    margin-bottom:30px;
+    
+}
+#cardicon{
+    color:#17A2B8;
+}
+
+</style>
+  
+<div class="container" id="body">
+<div class="row">
+<div class="col-6">
+<video width="590" height="300" controls>
+  <source src="{% static 'video/sample.mp4'%}" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+</div>
+<div class="col-6">
+<h4 class="videocontent">Dumy Content Here</h4>
+<p class="videocontentp">This is sample video</p>
+</div>
+</div>
+</div>
+<hr class="aftervideo"/>
+<div class="container">
+<h4 class="headingtitle">Latest myDiary Post</h4>
+  <div class="row">
+    <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+      <div class="card">
+        <img class="card-img" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/pasta.jpg" alt="Bologna">
+        <div class="card-img-overlay">
+          <a href="#" class="btn btn-light btn-sm">Cooking</a>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Pasta with Prosciutto</h4>
+          <small class="text-muted cat">
+            <i class="fa fa-clock-o" id="cardicon" aria-hidden="true"></i> 30 minutes
+            <i class="fa fa-users"id="cardicon"  aria-hidden="true"></i> 4 portions
+          </small>
+          <p class="card-text">I love quick, simple pasta dishes, and this is one of my favorite.</p>
+          <a href="#" class="btn btn-info">Read Recipe</a>
+        </div>
+        <div class="card-footer text-muted d-flex justify-content-between bg-transparent border-top-0">
+          <div class="views">Oct 20, 12:45PM
+          </div>
+          <div class="stats">
+           	<i class="fa fa-eye" id="cardicon" aria-hidden="true"></i> 1347
+            <i class="fa fa-comment"  id="cardicon" aria-hidden="true"></i> 12
+          </div>
+           
+        </div>
+      </div>
+    </div>
+     <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+      <div class="card">
+        <img class="card-img" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/pasta.jpg" alt="Bologna">
+        <div class="card-img-overlay">
+          <a href="#" class="btn btn-light btn-sm">Cooking</a>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Pasta with Prosciutto</h4>
+          <small class="text-muted cat">
+            <i class="fa fa-clock-o" id="cardicon" aria-hidden="true"></i> 30 minutes
+            <i class="fa fa-users" id="cardicon" aria-hidden="true"></i> 4 portions
+          </small>
+          <p class="card-text">I love quick, simple pasta dishes, and this is one of my favorite.</p>
+          <a href="#" class="btn btn-info">Read Recipe</a>
+        </div>
+        <div class="card-footer text-muted d-flex justify-content-between bg-transparent border-top-0">
+          <div class="views">Oct 20, 12:45PM
+          </div>
+          <div class="stats">
+           	<i class="fa fa-eye" id="cardicon" aria-hidden="true"></i> 1347
+            <i class="fa fa-comment"  id="cardicon" aria-hidden="true"></i>12
+          </div>
+           
+        </div>
+      </div>
+    </div>
+     <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+      <div class="card">
+        <img class="card-img" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/pasta.jpg" alt="Bologna">
+        <div class="card-img-overlay">
+          <a href="#" class="btn btn-light btn-sm">Cooking</a>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Pasta with Prosciutto</h4>
+          <small class="text-muted cat">
+            <i class="fa fa-clock-o" id="cardicon" aria-hidden="true"></i> 30 minutes
+            <i class="fa fa-users"  id="cardicon" aria-hidden="true"></i> 4 portions
+          </small>
+          <p class="card-text">I love quick, simple pasta dishes, and this is one of my favorite.</p>
+          <a href="#" class="btn btn-info">Read Recipe</a>
+        </div>
+        <div class="card-footer text-muted d-flex justify-content-between bg-transparent border-top-0">
+          <div class="views">Oct 20, 12:45PM
+          </div>
+          <div class="stats">
+           	<i class="fa fa-eye" id="cardicon" aria-hidden="true"></i>1347
+            <i class="fa fa-comment" id="cardicon" aria-hidden="true"></i> 12
+          </div>
+           
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
